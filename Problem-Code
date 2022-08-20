@@ -1,0 +1,18 @@
+class Solution {
+    public boolean rotateString(String s, String goal) {
+     //another solution
+     String s1=s;
+     int l=s.length();
+    while(l-->0){
+     if(s1.equals(goal))
+        return true;
+     String fc=String.valueOf(s1.charAt(0));
+     s1=s1.substring(1,s1.length())+fc;
+     }
+    return false;
+    }
+        //this solution is also a effecient solution
+        // if(s.length()!=goal.length())
+        // return false;
+        // return ((s+s).contains(goal));
+}
